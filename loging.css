@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #a5a2f0, #81b3f1); /* Softer gradient background */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  transition: all 0.3s ease; /* Smooth transition for body background */
+}
+
+/* Login container with smaller padding */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%; /* Reduced width */
+  max-width: 1000px; /* Maximum width */
+  height: 70%; /* Reduced height */
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  border-radius: 20px; /* Rounded corners */
+  padding: 40px; /* Increased padding for space around the container */
+  transition: all 0.3s ease; /* Smooth transition */
+  overflow: hidden;
+}
+
+/* Flex layout for content */
+.login-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left side: Login Form */
+.login-form {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+/* Title styling */
+.login-form h2 {
+  margin-bottom: 30px;
+  font-size: 35px; /* Larger font size */
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+/* Styling for email and password inputs */
+input[type="email"],
+input[type="password"] {
+  width: 90%; /* Wider input fields */
+  padding: 18px;
+  margin-bottom: 20px; /* Increased margin */
+  border: 1px solid #ddd;
+  border-radius: 30px; /* Rounded inputs */
+  font-size: 18px;
+  background-color: #f9f9f9; /* Soft background color */
+  transition: all 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #2575fc;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(37, 117, 252, 0.3);
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Button styling with hover and focus effects */
+button {
+  width: 80%;
+  padding: 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 30px; /* Rounded button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Right side: Slider */
+.login-image {
+  flex: 0.8;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 30px;
+  border-radius: 20px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slider-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Hide the radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Animating the slider using CSS */
+#slide1:checked ~ .slider-images {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .slider-images {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slider-images {
+  transform: translateX(-200%);
+}
+
+/* Optionally, add a timing function to auto-switch slides every 3 seconds */
+@keyframes autoSlider {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider-images {
+  animation: autoSlider 9s infinite;
+}
+

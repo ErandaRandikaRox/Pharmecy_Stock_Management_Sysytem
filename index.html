@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Stock Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="header-bar">
+    <h1><pre>Pharmacy Stock Management System<pre></h1>
+    <div>
+      <input type="text" id="searchBar" placeholder="Search by Medicine Name" />
+      <button id="filterOutOfStockButton" class="">Filter Out of Stock</button>
+      <video id="animatedVideo" autoplay loop muted>
+        <source src="/Modern-Login-master/assets/Icons/herbal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="name" placeholder="Medicine Name" required />
+    <input type="number" id="quantity" placeholder="Quantity" required />
+    <button id="addStockButton">Add Stock</button>
+  </div>
+
+  <h2>Current Stock</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Medicine Name</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="stockTable">
+        <!-- Stock items will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

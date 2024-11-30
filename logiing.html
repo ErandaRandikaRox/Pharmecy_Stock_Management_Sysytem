@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Pharmacy Stock Management</title>
+  <link rel="stylesheet" href="loging.css">
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-content">
+      <!-- Left side: Login form -->
+      <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <button type="submit" id="loginButton">Login</button>
+        </form>
+      </div>
+
+      <!-- Right side: Image Slider -->
+      <div class="login-image">
+        <div class="slider-container">
+          <input type="radio" id="slide1" name="slider" checked />
+          <input type="radio" id="slide2" name="slider" />
+          <input type="radio" id="slide3" name="slider" />
+          
+          <div class="slider-images">
+            <div class="slider-slide">
+              <img src="assets/potos/doctor-5548567_1280.png" alt="Login Image 1" />
+            </div>
+            <div class="slider-slide">
+              <img src="assets/potos/medical-5459650_1280.png" alt="Login Image 2" />
+            </div>
+            <div class="slider-slide">
+              <img src="assets/potos/medical-5459661_1280.png" alt="Login Image 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include the login.js for login functionality -->
+  <script type="module" src="loging.js"></script>
+</body>
+</html>
